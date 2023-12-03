@@ -1,5 +1,5 @@
-import java.io.Console;
-import java.io.IOException;
+import AnimalsPackage.*;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -25,14 +25,10 @@ public class Main {
             case 1:
                 System.out.println("Введите имя");
                 String name = input.next().toString();
-                try {
+
                     System.out.println("Введите дату рождения в формате yyyy-MM-dd");
                     Date birthDate = new SimpleDateFormat("yyyy-MM-dd").parse(input.next().toString());
-                }
-                catch (Exception e){
-                    System.out.println("Ошибка ввода даты"  + e.getMessage());
-                    break;
-                }
+
 
                 view.GetTypesAnimals();
                 int switchAnimal = input.nextInt();
@@ -47,31 +43,31 @@ public class Main {
                             System.out.println(item.getValue());
                         }*/
                     case 2:
-                        Animals dog = new Dog(name,new SimpleDateFormat("yyyy-MM-dd").parse(birthDate));
+                        Animals dog = new Dog(name,birthDate);
                         animalsHashMap.put(hmNumber,dog);
                         hmNumber++;
                         break;
 
                     case 3:
-                        Animals hamster = new Hamster(name,new SimpleDateFormat("yyyy-MM-dd").parse(birthDate));
+                        Animals hamster = new Hamster(name,birthDate);
                         animalsHashMap.put(hmNumber,hamster);
                         hmNumber++;
                         break;
 
                     case 4:
-                        Animals horse = new Horse(name,new SimpleDateFormat("yyyy-MM-dd").parse(birthDate));
+                        Animals horse = new Horse(name,birthDate);
                         animalsHashMap.put(hmNumber,horse);
                         hmNumber++;
                         break;
 
                     case 5:
-                        Animals camel = new Camel(name,new SimpleDateFormat("yyyy-MM-dd").parse(birthDate));
+                        Animals camel = new Camel(name,birthDate);
                         animalsHashMap.put(hmNumber,camel);
                         hmNumber++;
                         break;
 
                     case 6:
-                        Animals cow = new Cow(name,new SimpleDateFormat("yyyy-MM-dd").parse(birthDate));
+                        Animals cow = new Cow(name,birthDate);
                         animalsHashMap.put(hmNumber,cow);
                         hmNumber++;
                         break;

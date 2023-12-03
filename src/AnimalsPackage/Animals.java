@@ -1,3 +1,5 @@
+package AnimalsPackage;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -7,7 +9,7 @@ import java.util.Date;
  * Имя
  * Дата рожедния
  */
-abstract class Animals {
+public abstract class Animals {
     private static int nextId = 1;
     public Integer id;
     public String name;
@@ -38,9 +40,9 @@ abstract class Animals {
     public String toString() {
         return
                 "id - " + id + " \n" +
-                "name - " + name + " \n" +
-                "birthDate - " + birthDate + " \n" +
-                "available commands:\n" + ReturnCommands(commands);
+                        "name - " + name + " \n" +
+                        "birthDate - " + birthDate + " \n" +
+                        "available commands:\n" + ReturnCommands(commands);
     }
 
     /**
@@ -59,7 +61,7 @@ abstract class Animals {
     private StringBuilder ReturnCommands(ArrayList<String> list){
         StringBuilder result = new StringBuilder();
         for (String item: list
-             ) {
+        ) {
             result.append(item).append(" \n");
         }
 
