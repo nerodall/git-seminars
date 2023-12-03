@@ -1,4 +1,5 @@
 import java.io.Console;
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -24,13 +25,20 @@ public class Main {
             case 1:
                 System.out.println("Введите имя");
                 String name = input.next().toString();
-                System.out.println("Введите дату рождения в формате yyyy-MM-dd");
-                String birthDate = input.next().toString();
+                try {
+                    System.out.println("Введите дату рождения в формате yyyy-MM-dd");
+                    Date birthDate = new SimpleDateFormat("yyyy-MM-dd").parse(input.next().toString());
+                }
+                catch (Exception e){
+                    System.out.println("Ошибка ввода даты"  + e.getMessage());
+                    break;
+                }
+
                 view.GetTypesAnimals();
                 int switchAnimal = input.nextInt();
                 switch (switchAnimal){
                     case 1:
-                        Animals cat = new Cat(name,new SimpleDateFormat("yyyy-MM-dd").parse(birthDate));
+                        Animals cat = new Cat(name,birthDate);
                         animalsHashMap.put(hmNumber,cat);
                         hmNumber++;
                         break;
