@@ -16,12 +16,12 @@ public abstract class Animals {
     public Date birthDate;
 
 
-
     public ArrayList<String> commands;
 
     /**
      * Контсруктор для класса Animals
-     * @param name имя животного
+     *
+     * @param name      имя животного
      * @param birthDate дата рождения в формате yyyy-MM-dd
      */
     public Animals(String name, Date birthDate) {
@@ -34,6 +34,7 @@ public abstract class Animals {
 
     /**
      * Метода для вывода id, имени, даты рождения и доступных команд для животного
+     *
      * @return
      */
     @Override
@@ -47,6 +48,7 @@ public abstract class Animals {
 
     /**
      * Метод для добавления новой команды для животного
+     *
      * @param command новая команда
      */
     public void AddCommand(String command) {
@@ -55,16 +57,17 @@ public abstract class Animals {
 
     /**
      * Метод для вывода всех доступных команд
+     *
      * @param list список команд
      * @return
      */
-    private StringBuilder ReturnCommands(ArrayList<String> list){
+    private StringBuilder ReturnCommands(ArrayList<String> list) {
         StringBuilder result = new StringBuilder();
-        for (String item: list
+        for (String item : list
         ) {
             result.append(item).append(" \n");
         }
 
-        return  result;
+        return result;
     }
 }
