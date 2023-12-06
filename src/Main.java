@@ -12,7 +12,7 @@ public class Main {
         HashMap<Integer, Animals> animalsHashMap = new HashMap<>();
         Integer hmNumber = 0;
 
-        //Тут тестовый элемет. Можно раскоментить, чтобы руками заполнять
+        //Тут тестовый элемент. Можно раскоментить, чтобы руками заполнять
         Animals cat1 = new Cat("Барсик", new SimpleDateFormat("yyyy-MM-dd").parse("2022-02-11"));
         animalsHashMap.put(999, cat1);
 
