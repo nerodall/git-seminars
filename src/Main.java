@@ -93,6 +93,7 @@ public class Main {
                     }
                     break;
                 case 4:
+
                     System.out.println("Общее количество животных " + animalsHashMap.size() + "\n");
 
 
