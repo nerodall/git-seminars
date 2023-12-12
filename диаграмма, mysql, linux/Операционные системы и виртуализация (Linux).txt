@@ -1,0 +1,32 @@
+- Создать два текстовых файла: "Pets"(Домашние животные) и "Pack
+animals"(вьючные животные), используя команду `cat` в терминале Linux. В
+первом файле перечислить собак, кошек и хомяков. Во втором — лошадей,
+верблюдов и ослов.   
+
+ 5  ls
+    6  history
+    7  cat > Pets
+    8  cat > PackAnimals
+    9  cat Pets PackAnimals > HumanFriends
+   10  ls
+   11  history
+
+user@user-VirtualBox:~$ ls
+ HumanFriends   PackAnimals   Pets   snap   Видео   Документы   Загрузки   Изображения   Музыка   Общедоступные  'Рабочий стол'   Шаблоны
+
+
+2 Работа с директориями в Linux
+- Создать новую директорию и переместить туда файл "Human Friends".
+
+   12  mkdir hw
+   13  mv HumanFriends hw
+- Подключить дополнительный репозиторий MySQL и установить один из
+пакетов из этого репозитория.
+   18  sudo apt install mysql-server
+
+- Установить и затем удалить deb-пакет, используя команду `dpkg`.
+    5  wget http://ftp.de.debian.org/debian/pool/main/p/phpmyadmin/phpmyadmin_5.2.1+dfsg-2_all.deb
+    6  sudo dpkg -i phpmyadmin_5.2.1+dfsg-2_all.deb.1
+    7  sudo dpkg -r phpmyadmin_5.2.1+dfsg-2_all.deb.1
+  
+
