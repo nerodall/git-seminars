@@ -17,6 +17,9 @@ public class Main {
         animalsHashMap.put(999, cat1);
 
 
+
+
+
         while (true) {
             view.ViewInterface();
             int sw = input.nextInt();
@@ -93,7 +96,6 @@ public class Main {
                     }
                     break;
                 case 4:
-
                     System.out.println("Общее количество животных " + animalsHashMap.size() + "\n");
 
 
