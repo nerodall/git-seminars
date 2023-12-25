@@ -1,2 +1,2 @@
 # git-seminars
-test
+this readme file
